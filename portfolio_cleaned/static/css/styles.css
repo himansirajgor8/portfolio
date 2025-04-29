@@ -1,0 +1,132 @@
+css
+/* Add custom styles here if needed */
+
+#index {
+    background-image: url('/static/images/sky3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+   
+}
+
+#projects .container {
+    position: relative;
+    z-index: 10;
+}
+
+#projects h2 {
+    color: white;
+}
+
+
+#projects {
+    background-image: url('/static/images/sky3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+   
+}
+
+#projects .container {
+    position: relative;
+    z-index: 10;
+}
+
+#projects h2 {
+    color: white;
+}
+
+#contact {
+    background-image: url('/static/images/sky3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+   
+}
+
+#projects .container {
+    position: relative;
+    z-index: 10;
+}
+
+#projects h2 {
+    color: white;
+}
+#skills {
+    background-image: url('/static/images/sky3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+   
+}
+
+#projects .container {
+    position: relative;
+    z-index: 10;
+}
+
+#projects h2 {
+    color: white;
+}
+#about {
+    background-image: url('/static/images/sky3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+/* Center the content */
+.intro-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+    perspective: 1200px; /* Important for 3D effect */
+}
+#projects .container {
+    position: relative;
+    z-index: 10;
+}
+
+#projects h2 {
+    color: white;
+}
+
+/* Card Styling */
+.intro-box {
+    background-color: #1e293b;
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 600px;
+    text-align: left;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s, box-shadow 0.5s;
+    transform-style: preserve-3d;
+}
+
+/* Heading */
+.intro-box h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Paragraph */
+.intro-box p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Add 3D Hover Effect */
+.intro-box:hover {
+    transform: rotateY(10deg) rotateX(10deg) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+
+ 
