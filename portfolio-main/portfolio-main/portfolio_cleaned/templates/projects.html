@@ -1,0 +1,140 @@
+
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Projects - Himansi Rajgor
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+    /* 3D tilt and animation */
+    .skill-card {
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      transform-style: preserve-3d;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+    .skill-card:hover {
+      transform: perspective(1000px) rotateY(8deg) rotateX(8deg) scale(1.05);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .fade-in {
+      animation: fadeInUp 1.2s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+ </head>
+ <body class="bg-[#0f1a40] min-h-screen text-white font-sans relative overflow-x-hidden">
+  
+    
+    <div class="relative z-10">
+      <nav class="flex justify-between items-center px-6 py-4 bg-[#0f172a] bg-opacity-90 border-b border-gray-800">
+        <div>
+          <a href="{{ url_for('index') }}" class="text-[#3b82f6] font-semibold text-lg">Himansi Rajgor</a>
+        </div>
+        <ul class="hidden md:flex space-x-8 text-white text-sm font-normal">
+          <li><a href="{{ url_for('about') }}" class="hover:underline">About</a></li>
+          <li><a href="{{ url_for('skills') }}" class="hover:underline">Skills</a></li>
+          <li><a href="{{ url_for('projects') }}" class="hover:underline">Projects</a></li>
+          <li><a href="{{ url_for('contact') }}" class="hover:underline">Contact</a></li>
+          <li><a href="{{ url_for('certificates') }}" class="hover:underline">certificates</a></li>
+           <li><a href="{{ url_for('resume') }}" class="hover:underline">Resume</a></li>
+          
+        </ul>
+    
+  </nav>
+
+  
+  <section class="py-12" style="background-color: rgb(0, 0, 17);">
+   
+    <div class="relative max-w-7xl mx-auto px-6 fade-in">
+      <h2 class="text-white font-bold text-4xl text-center mb-12">
+        Projects
+      </h2>
+  
+   <div class="max-w-7xl w-full flex flex-col sm:flex-row justify-center gap-8 relative z-10">
+    <div class="bg-[#1e293b] rounded-md p-4 max-w-xs flex flex-col shadow-lg">
+     
+      <img alt="Cute small robot speaker with ace with a soft spotlight behind" class="rounded-md mb-4 object-cover w-full h-48" height="200" src='/static/images/robo.jpg' width="400"/>
+     <h3 class="font-semibold text-white mb-2 select-none">
+      Robo Speaker
+     </h3>
+     <p class="text-gray-300 text-sm mb-3 leading-relaxed select-text">
+      Developed a Python-based text-to-speech robot. Implemented user-friendly voice output features.
+     </p>
+     <a class="text-sky-500 text-sm hover:underline select-text" href="https://github.com/himansirajgor8/robo-speaker">
+      View Project
+     </a>
+    </div>
+    <div class="bg-[#1e293b] rounded-md p-4 max-w-xs flex flex-col shadow-lg">
+     <img alt="Hand pointing at a digital lock icon on a futuristic blue tech interface" class="rounded-md mb-4 object-cover w-full h-48" height="200" src='/static/images/Password.jpg' width="400"/>
+     <h3 class="font-semibold text-white mb-2 select-none">
+      Password Checker
+     </h3>
+     <p class="text-gray-300 text-sm mb-3 leading-relaxed select-text">
+      Implemented real-time feedback and suggestions to guide users to creating strong passwords.
+     </p>
+     <a class="text-sky-500 text-sm hover:underline select-text" href="https://github.com/himansirajgor8/password-checker">
+      View Project
+     </a>
+    </div>
+    <div class="bg-[#1e293b] rounded-md p-4 max-w-xs flex flex-col shadow-lg">
+     <img alt="Face of a woman with digital blue facial recognition grid overlay and data points" class="rounded-md mb-4 object-cover w-full h-48" height="200" src='/static/images/face.jpg' width="400"/>
+     <h3 class="font-semibold text-white mb-2 select-none">
+      Face Detection
+     </h3>
+     <p class="text-gray-300 text-sm mb-3 leading-relaxed select-text">
+      Developed a real-time face detection system. It can detect user faces in videos and images.
+     </p>
+     <a class="text-sky-500 text-sm hover:underline select-text" href="https://github.com/himansirajgor8/face-detection">
+      View Project
+     </a>
+    </div>
+    <div class="bg-[#1e293b] rounded-md p-4 max-w-xs flex flex-col shadow-lg">
+      <img alt="Face of a woman with digital blue facial recognition grid overlay and data points" class="rounded-md mb-4 object-cover w-full h-48" height="200" src='/static/images/wifi.jpg' width="400"/>
+      <h3 class="font-semibold text-white mb-2 select-none">
+        Wifi Scaner 
+      </h3>
+      <p class="text-gray-300 text-sm mb-3 leading-relaxed select-text">
+       Developed a real-time face detection system. It can detect user faces in videos and images.
+      </p>
+      <a class="text-sky-500 text-sm hover:underline select-text" href="https://github.com/himansirajgor8/wifi-scanner">
+       View Project
+      </a>
+     </div>
+     
+   </div>
+  </div>
+  <footer class="bg-[#1e293b] text-gray-300 text-center py-6">
+    <p class="text-sm mb-3">
+     © 2025 Himansi Rajgor. All rights reserved.
+    </p>
+    <div class="flex justify-center space-x-4 text-xs">
+     <a aria-label="LinkedIn" class="hover:text-white" href="https://www.linkedin.com/in/himansi-rajgor-837b71318?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2BW%2FQqOxeTW2trJaS6tUDhQ%3D%3D"
+     ">
+      <i class="fab fa-linkedin-in">
+      </i>
+     </a>
+     <a aria-label="GitHub" class="hover:text-white" href="https://github.com/himansirajgor8">
+      <i class="fab fa-github">
+      </i>
+     </a>
+     
+      </i>
+     </a>
+    </div>
+   </footer>
+ </body>
+</html>

@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Himansi Rajgor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+    body {
+      font-family: "Inter", sans-serif;
+    }
+    
+  </style>
+</head>
+<body class="text-white min-h-screen relative" style="background: url('/static/images/sky3.jpg') no-repeat center center fixed; background-size: cover;">
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+
+  <!-- Main Content -->
+  <div class="relative z-10">
+    <nav class="flex justify-between items-center px-6 py-4 bg-[#0f172a] bg-opacity-90 border-b border-gray-800">
+      <div>
+        <a href="{{ url_for('index') }}" class="text-[#3b82f6] font-semibold text-lg">Himansi Rajgor</a>
+      </div>
+      <ul class="hidden md:flex space-x-8 text-white text-sm font-normal">
+        <li><a href="{{ url_for('about') }}" class="hover:underline">About</a></li>
+        <li><a href="{{ url_for('skills') }}" class="hover:underline">Skills</a></li>
+        <li><a href="{{ url_for('projects') }}" class="hover:underline">Projects</a></li>
+        <li><a href="{{ url_for('contact') }}" class="hover:underline">Contact</a></li>
+        <li><a href="{{ url_for('certificates') }}" class="hover:underline">certificates</a></li>
+         <li><a href="{{ url_for('resume') }}" class="hover:underline">Resume</a></li>
+        
+      </ul>
+    </nav>
+
+    <header class="flex items-center justify-center px-6 py-28">
+      <div class="text-center max-w-4xl">
+        <main class="flex-grow flex flex-col items-center justify-center px-6 text-center max-w-md mx-auto">
+        
+          <p class="text-white font-semibold mb-1 text-base">
+            Hello, I'm Himansi Rajgor
+          </p>
+          <h1 class="text-white font-extrabold text-4xl mb-4 leading-tight">
+            Developer
+          </h1>
+          
+           <h1> Python developer skilled in data-structures, algorithms, and Pandas/NumPy. Experienced in building data-visualization and inventory management projects. Strong problem-solver with a focus on clean, efficient code. Eager to contribute technical expertise to a dynamic team.</h1>
+          
+          <a
+            href="{{ url_for('contact') }}"
+            class="inline-block bg-white text-[#3b82f6] font-semibold text-sm sm:text-base rounded-full px-6 py-2 hover:bg-gray-100 transition"
+          >Get in Touch</a>
+        </main>
+      </div>
+    </header>
+
+    <footer class="bg-[#1e293b] bg-opacity-90 text-gray-300 text-center py-6">
+      <p class="text-sm mb-3">
+        © 2025 Himansi Rajgor. All rights reserved.
+      </p>
+      <div class="flex justify-center space-x-4 text-xs">
+        <a aria-label="LinkedIn" class="hover:text-white" href="https://www.linkedin.com/in/himansi-rajgor-837b71318?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2BW%2FQqOxeTW2trJaS6tUDhQ%3D%3D"
+        "><i class="fab fa-linkedin-in"></i></a>
+        <a aria-label="GitHub" class="hover:text-white" href="https://github.com/himansirajgor8"><i class="fab fa-github"></i></a>
+        
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

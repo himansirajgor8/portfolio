@@ -1,0 +1,101 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Contact - Himansi Rajgor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+
+  <!-- Custom Animations -->
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    @keyframes popUp {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .pop-up {
+      animation: popUp 0.8s ease forwards;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+  <!-- Navbar -->
+  <div class="relative z-10">
+    <nav class="flex justify-between items-center px-6 py-4 bg-[#0f172a] bg-opacity-90 border-b border-gray-800">
+      <div>
+        <a href="{{ url_for('index') }}" class="text-[#3b82f6] font-semibold text-lg">Himansi Rajgor</a>
+      </div>
+      <ul class="hidden md:flex space-x-8 text-white text-sm font-normal">
+        <li><a href="{{ url_for('about') }}" class="hover:underline">About</a></li>
+        <li><a href="{{ url_for('skills') }}" class="hover:underline">Skills</a></li>
+        <li><a href="{{ url_for('projects') }}" class="hover:underline">Projects</a></li>
+        <li><a href="{{ url_for('contact') }}" class="hover:underline">Contact</a></li>
+        <li><a href="{{ url_for('certificates') }}" class="hover:underline">certificates</a></li>
+         <li><a href="{{ url_for('resume') }}" class="hover:underline">Resume</a></li>
+        
+      </ul>
+    </nav>
+  <!-- Contact Form Section -->
+  <section class="py-12 fade-in" style="background-color: rgb(0, 0, 17);">
+    <div class="relative w-full min-h-[500px] flex justify-center items-start pt-16 px-4">
+      <div class="max-w-md w-full bg-white rounded-md p-6 mt-8 text-gray-900 shadow-lg pop-up">
+        <h2 class="text-center text-xl font-semibold mb-6">Contact Me</h2>
+        <form method="POST" action="{{ url_for('contact') }}" onsubmit="showPopup(event)">
+          <label class="block mb-2 text-xs font-medium" for="name">Name</label>
+          <input name="name" id="name" type="text" placeholder="Your Name"
+            class="w-full mb-4 px-3 py-2 border border-gray-300 rounded text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-600"/>
+
+          <label class="block mb-2 text-xs font-medium" for="email">Email</label>
+          <input name="email" id="email" type="email" placeholder="Your Email"
+            class="w-full mb-4 px-3 py-2 border border-gray-300 rounded text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-600"/>
+
+          <label class="block mb-2 text-xs font-medium" for="message">Message</label>
+          <textarea name="message" id="message" rows="4" placeholder="Your Message"
+            class="w-full mb-4 px-3 py-2 border border-gray-300 rounded text-sm placeholder-gray-400 resize-none focus:outline-none focus:ring-2 focus:ring-sky-600"></textarea>
+          
+          <button type="submit" 
+            class="w-full bg-sky-600 text-white text-xs font-semibold py-2 rounded hover:bg-sky-700 transition">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#1e293b] text-center text-white text-sm py-6 mt-12 fade-in">
+    <p class="mb-3">© 2025 Himansi Rajgor. All rights reserved.</p>
+    <div class="flex justify-center space-x-6 text-white text-base">
+      <a href="https://www.linkedin.com/in/himansi-rajgor-837b71318?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2BW%2FQqOxeTW2trJaS6tUDhQ%3D%3D"
+      " aria-label="LinkedIn" class="hover:text-sky-400">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/himansirajgor8" aria-label="GitHub" class="hover:text-sky-400">
+        <i class="fab fa-github"></i>
+      </a>
+      
+    </div>
+  </footer>
+
+  <!-- JavaScript for popup message -->
+  <script>
+    function showPopup(event) {
+      event.preventDefault(); // Stops form from refreshing page immediately
+      alert("Thank you for your message! I will get back to you soon.");
+      event.target.submit();
+    }
+  </script>
+</body>
+</html>
